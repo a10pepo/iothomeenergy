@@ -47,7 +47,9 @@ https://www.raspberrypi.org/software/
 ##### 3.3) Update
 
 `sudo apt update`
+
 `sudo apt upgrade`
+
 `sudo apt install default-jdk`
 
 ##### 3.4) Install software
@@ -55,27 +57,39 @@ https://www.raspberrypi.org/software/
 ###### 3.4.1) Mosquitto
 
 `apt-get install mosquitto`
+
 `apt-get install mosquitoo-clients`
 
 `mosquitto_sub -d -t testTopic`
+
 `mosquitto_pub -d -t testTopic -m "Hello world!"`
 
 ###### 3.4.2) Node-Red or Nifi
 
 `bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)`
+
 `sudo systemctl enable nodered.service`
+
 `sudo systemctl restart nodered.service`
+
 `node-red-pi --max-old-space-size=256`
 
 ###### 3.4.3) Kafka
 
 `wget https://apache.brunneis.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz`
+
 `tar -xvf kafka_2.12-2.3.0.tgz`
+
 `mv kafka_2.12-2.3.0 kafka`
+
 `cd kafka`
+
 `mkdir data`
+
 `cd data`
+
 `mkdir zookeeper`
+
 `mkdir kafka`
 
 Config:
@@ -97,8 +111,10 @@ replace:
 
 Create a topic:
 `bin/kafka-topics.sh --create --bootstrap-server 192.168.1.61:9092 --replication-factor 1 --partitions 1 --topic iotdata`
+
 `bin/kafka-topics.sh --list  --bootstrap-server 192.168.1.61:9092`
 
 ###### 3.4.3) Flink
 `wget https://apache.brunneis.com/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.12.tgz`
+
 `/home/pi/Data_Station/installation/binaries/flink/flink-1.12.0#./bin/start-cluster.sh`

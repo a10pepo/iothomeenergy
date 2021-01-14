@@ -76,7 +76,7 @@ https://www.raspberrypi.org/software/
 
 ###### 3.4.3) Kafka
 
-`wget https://apache.brunneis.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz`
+`wget https://downloads.apache.org/kafka/2.7.0/kafka_2.13-2.7.0.tgz`
 
 `tar -xvf kafka_2.12-2.3.0.tgz`
 
@@ -115,6 +115,6 @@ Create a topic:
 `bin/kafka-topics.sh --list  --bootstrap-server 192.168.1.61:9092`
 
 ###### 3.4.3) Flink
-`wget https://apache.brunneis.com/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.12.tgz`
+`wget https://downloads.apache.org/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.12.tgz`
 
 `/home/pi/Data_Station/installation/binaries/flink/flink-1.12.0#./bin/start-cluster.sh`
